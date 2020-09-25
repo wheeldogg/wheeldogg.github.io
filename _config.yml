@@ -1,0 +1,61 @@
+# Site Info
+title: thewheeldogg.com
+tagline: "thewheeldogg.com"
+description: 'A Jekyll theme adapted from <a href="http://lanyon.getpoole.com/" target="_blank">Lanyon</a>.'
+baseurl: ""
+url: http://wheeldogg.github.io
+logo: "/public/img/datavis.jpg" #'/public/logo_wheeldogg.png'
+
+# Site configurations
+plugins:
+  - jekyll-paginate
+markdown: kramdown
+kramdown:
+  input: GFM
+excerpt_separator: "<!-- more -->"
+sass:
+  style: compressed
+  sass_dir: _scss
+paginate: 5
+paginate_path: "/blog/page:num"
+permalink: pretty
+
+version: 1.0.0
+
+# About/contact
+author:
+  name: Shane Whelan
+  # description: Check out some projects below
+  gravatar: f0d7178eaba581b33ab3ed7cee1db0d8 # md5 hash of your email address
+  contact:
+    linkedin: https://linkedin.com/in/shane-whelan-85591353/
+    github: https://github.com/wheeldogg
+    twitter: https://twitter.com/_wheeldogg_
+    email: mailto:shanewhelan89@gmail.com)
+
+# Navigation (2nd level links supported)
+nav:
+  Home: "/"
+  Blog:
+    - "/blog/"
+    - { Categories: "/blog/categories/" }
+    - { Tags: "/blog/tags/" }
+    - { Travel: "/blog/travel/" }
+  Apps:
+    - "/apps"
+  Github:
+    - "https://github.com/wheeldogg"
+  Music:
+    - "/music/"
+    - { Soundcloud: "http://thewheeldogg.com/music#soundcloud-iframes" }
+    - { Mixcloud: "http://thewheeldogg.com/music#mixcloud-iframes" }
+
+# Where are tags and categories displayed
+tag_page: "/blog/tags/"
+category_page: "/blog/categories/"
+
+# Puglins
+mathjax: true # whether support mathjax
+google_analytics_token: "UA-00000000-1" # leave blank if you don't want google analytics
+disqus_short_name: "wheeldogg" # leave blank if you don't want disqus
+
