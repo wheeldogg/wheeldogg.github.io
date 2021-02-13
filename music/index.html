@@ -3,96 +3,425 @@ layout: default
 title: Music
 ---
 
-<h1>Soundcloud</h1>
-<div id="soundcloud-iframes">
-  <iframe
-    width="100%"
-    height="166"
-    scrolling="no"
-    frameborder="no"
-    allow="autoplay"
-    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/881371537&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
-  ></iframe>
-  <div
-    style="
-      font-size: 10px;
-      color: #cccccc;
-      line-break: anywhere;
-      word-break: normal;
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
-        Garuda, Verdana, Tahoma, sans-serif;
-      font-weight: 100;
-    "
-  >
-    <a
-      href="https://soundcloud.com/wheeldogg"
-      title="Wheeldogg"
-      target="_blank"
-      style="color: #cccccc; text-decoration: none"
-      >Wheeldogg</a
-    >
-    ·
-    <a
-      href="https://soundcloud.com/wheeldogg/cuairteoiri"
-      title="Cuairteoiri"
-      target="_blank"
-      style="color: #cccccc; text-decoration: vb none"
-      >Cuairteoiri</a
-    >
-  </div>
-</div>
-<br />
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        font-family: Arial;
+      }
 
-<h1>Mixcloud</h1>
-<div id="mixcloud-iframes">
-  <iframe
-    width="100%"
-    height="120"
-    src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fwheeldogg%2Fmix-sept-2020%2F"
-    frameborder="0"
-  ></iframe>
-  <iframe
-    width="100%"
-    height="120"
-    src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fwheeldogg%2Fmix-aug-2020%2F"
-    frameborder="0"
-  ></iframe>
+      /* Style the tab */
+      .tab {
+        overflow: hidden;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+      }
 
-  <iframe
-    width="100%"
-    height="120"
-    src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fwheeldogg%2Fdoggmix01%2F"
-    frameborder="0"
-  ></iframe>
+      /* Style the buttons inside the tab */
+      .tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+        font-size: 17px;
+      }
 
-  <iframe
-    width="100%"
-    height="120"
-    src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fwheeldogg%2Fmix_june_2020%2F"
-    frameborder="0"
-  ></iframe>
+      /* Change background color of buttons on hover */
+      .tab button:hover {
+        background-color: #ddd;
+      }
 
-  <iframe
-    width="100%"
-    height="120"
-    src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fwheeldogg%2Fmix-may-2020%2F"
-    frameborder="0"
-  ></iframe>
+      /* Create an active/current tablink class */
+      .tab button.active {
+        background-color: #ccc;
+      }
 
-  <iframe
-    width="100%"
-    height="120"
-    src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fwheeldogg%2Fmix-march-2020%2F"
-    frameborder="0"
-  ></iframe>
+      /* Style the tab content */
+      .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        border-top: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tab">
+      <button
+        class="tablinks a"
+        onclick="openChannel(event, 'Soundcloud')"
+        id="defaultOpen"
+      >
+        Soundcloud
+      </button>
+      <button class="tablinks" onclick="openChannel(event, 'Mixcloud')">
+        Mixcloud
+      </button>
+    </div>
 
-  <iframe
-    width="100%"
-    height="120"
-    src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fwheeldogg%2Fmix-april-2020%2F"
-    frameborder="0"
-  ></iframe>
-</div>
+    <div id="Soundcloud" class="tabcontent active">
+      <iframe
+        width="100%"
+        height="166"
+        scrolling="no"
+        frameborder="no"
+        allow="autoplay"
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/975792874&color=%23171f23&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+      ></iframe>
+      <div
+        style="
+          font-size: 10px;
+          color: #cccccc;
+          line-break: anywhere;
+          word-break: normal;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          font-family: Interstate, Lucida Grande, Lucida Sans Unicode,
+            Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
+          font-weight: 100;
+        "
+      >
+        <a
+          href="https://soundcloud.com/wheeldogg"
+          title="Wheeldogg"
+          target="_blank"
+          style="color: #cccccc; text-decoration: none"
+          >Wheeldogg</a
+        >
+        ·
+        <a
+          href="https://soundcloud.com/wheeldogg/roots-of-mine"
+          title="Roots Of Mine"
+          target="_blank"
+          style="color: #cccccc; text-decoration: none"
+          >Roots Of Mine</a
+        >
+      </div>
+      <iframe
+        width="100%"
+        height="166"
+        scrolling="no"
+        frameborder="no"
+        allow="autoplay"
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/881371537&color=%23171f23&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+      ></iframe>
+      <div
+        style="
+          font-size: 10px;
+          color: #cccccc;
+          line-break: anywhere;
+          word-break: normal;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          font-family: Interstate, Lucida Grande, Lucida Sans Unicode,
+            Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
+          font-weight: 100;
+        "
+      >
+        <a
+          href="https://soundcloud.com/wheeldogg"
+          title="Wheeldogg"
+          target="_blank"
+          style="color: #cccccc; text-decoration: none"
+          >Wheeldogg</a
+        >
+        ·
+        <a
+          href="https://soundcloud.com/wheeldogg/cuairteoiri"
+          title="Cuairteoiri"
+          target="_blank"
+          style="color: #cccccc; text-decoration: none"
+          >Cuairteoiri</a
+        >
+      </div>
+      <iframe
+        width="100%"
+        height="166"
+        scrolling="no"
+        frameborder="no"
+        allow="autoplay"
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/335613373&color=%232a313d&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+      ></iframe>
+      <div
+        style="
+          font-size: 10px;
+          color: #cccccc;
+          line-break: anywhere;
+          word-break: normal;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          font-family: Interstate, Lucida Grande, Lucida Sans Unicode,
+            Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
+          font-weight: 100;
+        "
+      >
+        <a
+          href="https://soundcloud.com/wheeldogg"
+          title="Wheeldogg"
+          target="_blank"
+          style="color: #cccccc; text-decoration: none"
+          >Wheeldogg</a
+        >
+        ·
+        <a
+          href="https://soundcloud.com/wheeldogg/cape-cello"
+          title="Cape-Cello"
+          target="_blank"
+          style="color: #cccccc; text-decoration: none"
+          >Cape-Cello</a
+        >
+      </div>
+      <iframe
+        width="100%"
+        height="166"
+        scrolling="no"
+        frameborder="no"
+        allow="autoplay"
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/300217990&color=%236d7473&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+      ></iframe>
+      <div
+        style="
+          font-size: 10px;
+          color: #cccccc;
+          line-break: anywhere;
+          word-break: normal;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          font-family: Interstate, Lucida Grande, Lucida Sans Unicode,
+            Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
+          font-weight: 100;
+        "
+      >
+        <a
+          href="https://soundcloud.com/wheeldogg"
+          title="Wheeldogg"
+          target="_blank"
+          style="color: #cccccc; text-decoration: none"
+          >Wheeldogg</a
+        >
+        ·
+        <a
+          href="https://soundcloud.com/wheeldogg/rhea"
+          title="Rhea"
+          target="_blank"
+          style="color: #cccccc; text-decoration: none"
+          >Rhea</a
+        >
+      </div>
+      <iframe
+        width="100%"
+        height="166"
+        scrolling="no"
+        frameborder="no"
+        allow="autoplay"
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/188884635&color=%23090a0a&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+      ></iframe>
+      <div
+        style="
+          font-size: 10px;
+          color: #cccccc;
+          line-break: anywhere;
+          word-break: normal;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          font-family: Interstate, Lucida Grande, Lucida Sans Unicode,
+            Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
+          font-weight: 100;
+        "
+      >
+        <a
+          href="https://soundcloud.com/wheeldogg"
+          title="Wheeldogg"
+          target="_blank"
+          style="color: #cccccc; text-decoration: none"
+          >Wheeldogg</a
+        >
+        ·
+        <a
+          href="https://soundcloud.com/wheeldogg/01-a-few-hours-later"
+          title="A Few Hours Later"
+          target="_blank"
+          style="color: #cccccc; text-decoration: none"
+          >A Few Hours Later</a
+        >
+      </div>
+      <iframe
+        width="100%"
+        height="166"
+        scrolling="no"
+        frameborder="no"
+        allow="autoplay"
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/203638912&color=%23090909&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+      ></iframe>
+      <div
+        style="
+          font-size: 10px;
+          color: #cccccc;
+          line-break: anywhere;
+          word-break: normal;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          font-family: Interstate, Lucida Grande, Lucida Sans Unicode,
+            Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
+          font-weight: 100;
+        "
+      >
+        <a
+          href="https://soundcloud.com/wheeldogg"
+          title="Wheeldogg"
+          target="_blank"
+          style="color: #cccccc; text-decoration: none"
+          >Wheeldogg</a
+        >
+        ·
+        <a
+          href="https://soundcloud.com/wheeldogg/keplera-1"
+          title="Keplera"
+          target="_blank"
+          style="color: #cccccc; text-decoration: none"
+          >Keplera</a
+        >
+      </div>
+      <iframe
+        width="100%"
+        height="166"
+        scrolling="no"
+        frameborder="no"
+        allow="autoplay"
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/35482267&color=%23363636&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+      ></iframe>
+      <div
+        style="
+          font-size: 10px;
+          color: #cccccc;
+          line-break: anywhere;
+          word-break: normal;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          font-family: Interstate, Lucida Grande, Lucida Sans Unicode,
+            Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
+          font-weight: 100;
+        "
+      >
+        <a
+          href="https://soundcloud.com/wheeldogg"
+          title="Wheeldogg"
+          target="_blank"
+          style="color: #cccccc; text-decoration: none"
+          >Wheeldogg</a
+        >
+        ·
+        <a
+          href="https://soundcloud.com/wheeldogg/nightfloat"
+          title="Nightfloat"
+          target="_blank"
+          style="color: #cccccc; text-decoration: none"
+          >Nightfloat</a
+        >
+      </div>
+      <br />
+    </div>
+
+    <div id="Mixcloud" class="tabcontent">
+      <div id="mixcloud-iframes">
+        <iframe
+          width="100%"
+          height="120"
+          src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fwheeldogg%2Fmix-nov-2020%2F"
+          frameborder="0"
+        ></iframe>
+
+        <iframe
+          width="100%"
+          height="120"
+          src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fwheeldogg%2Fmix-oct-2020%2F"
+          frameborder="0"
+        ></iframe>
+
+        <iframe
+          width="100%"
+          height="120"
+          src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fwheeldogg%2Fmix-sept-2020%2F"
+          frameborder="0"
+        ></iframe>
+
+        <iframe
+          width="100%"
+          height="120"
+          src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fwheeldogg%2Fmix-aug-2020%2F"
+          frameborder="0"
+        ></iframe>
+
+        <iframe
+          width="100%"
+          height="120"
+          src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fwheeldogg%2Fdoggmix01%2F"
+          frameborder="0"
+        ></iframe>
+
+        <iframe
+          width="100%"
+          height="120"
+          src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fwheeldogg%2Fmix_june_2020%2F"
+          frameborder="0"
+        ></iframe>
+
+        <iframe
+          width="100%"
+          height="120"
+          src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fwheeldogg%2Fmix-may-2020%2F"
+          frameborder="0"
+        ></iframe>
+
+        <iframe
+          width="100%"
+          height="120"
+          src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fwheeldogg%2Fmix-march-2020%2F"
+          frameborder="0"
+        ></iframe>
+
+        <iframe
+          width="100%"
+          height="120"
+          src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fwheeldogg%2Fmix-april-2020%2F"
+          frameborder="0"
+        ></iframe>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById("defaultOpen").click();
+
+      function openChannel(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+      $(".nav-item .nav-link").click(function (e) {
+        e.preventDefault();
+        $(this).addClass("active");
+        $(".nav-item .nav-link").not($(this)).removeClass("active");
+      });
+    </script>
+  </body>
+</html>
