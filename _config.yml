@@ -35,20 +35,15 @@ author:
 
 # Navigation (2nd level links supported)
 nav:
-  Home: "/"
-  Blog:
+  Programming:
     - "/blog/"
     - { Categories: "/blog/categories/" }
     - { Tags: "/blog/tags/" }
-    - { Travel: "/blog/travel/" }
-  Apps:
-    - "/apps"
-  Github:
-    - "https://github.com/wheeldogg"
+    - { Github: "https://github.com/wheeldogg" }
+  Photos and Travel:
+    - "/blog/travel/"
   Music:
     - "/music/"
-    - { Soundcloud: "http://thewheeldogg.com/music#soundcloud-iframes" }
-    - { Mixcloud: "http://thewheeldogg.com/music#mixcloud-iframes" }
 
 # Where are tags and categories displayed
 tag_page: "/blog/tags/"
