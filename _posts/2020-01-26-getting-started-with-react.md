@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with React
-categories: web-development
+categories: Full-Stack
 tags:
   - React
 ---

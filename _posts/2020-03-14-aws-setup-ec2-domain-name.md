@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Setup AWS EC2 and domain name.
-categories: web-development
+categories: Programming
 tags:
   - AWS
 ---

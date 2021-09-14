@@ -1,7 +1,7 @@
 ---
 title: Dockerizing your python code
 layout: post
-categories: data-science
+categories: Data-Science
 tags: docker
 ---
 
@@ -13,39 +13,44 @@ Here is how I got on.
 I want to combine Docker and Conda.
 
 #### links.
+
 I followed this great tutorial.
 https://runnable.com/docker/python/dockerize-your-python-application
 
-Once I got the command 
+Once I got the command
+
 ```
 docker build -t python-barcode .
 ```
+
 I instead had to run docker build -t test . which worked fine.
 ( I think the first reason it din't work was maybe docker was running).
 Then when I tried again it worked.
 
-Congrats if you get 
+Congrats if you get
+
 ```
 Successfully tagged python-barcode:latest
 ```
-Than you have your first image created and available.
 
+Than you have your first image created and available.
 
 #### docker images
 
 ```
 docker images
 ```
+
 will bring up what you have available.
 than
+
 ```
 docker run python-barcode
 ```
+
 Yes boi !
 
-
 #### docker images
-
 
 Example.
 

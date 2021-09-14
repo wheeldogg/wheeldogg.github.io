@@ -1,14 +1,14 @@
 ---
 title: Webpage building & Jekyll
 layout: post
-categories: web-development
+categories: Full-Stack
 tags:
-- Jekyll
+  - Jekyll
 ---
 
 ### Webpage building & Jekyll as a content documentation system.
 
-Jekyll is customizable right down to it's core. In this page I want to just get started writing a blog so forgive my long sentences. 
+Jekyll is customizable right down to it's core. In this page I want to just get started writing a blog so forgive my long sentences.
 
 This post aims to provide you with my overview of how to get running with Jekyll.
 This repo [https://github.com/codinfox/codinfox-lanyon](http://) was a great help for me getting started with Jekyll.

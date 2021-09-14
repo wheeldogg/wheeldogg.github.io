@@ -1,15 +1,16 @@
 ---
 title: Reticulate package! Ability to read python objects/functions in R.
 layout: post
-categories: programming
+categories: Programming
 tags:
-- R
-- python
+  - R
+  - python
 ---
 
 <img src="https://rstudio.github.io/reticulate/images/reticulated_python.png" alt="drawing" width="200"/>
 
 ## Documentation for reticulate package.
+
 official
 https://rstudio.github.io/reticulate/index.html
 
@@ -38,7 +39,7 @@ Code available on [Githbub](https://github.com/wheeldogg/reticulate_django)
 
 ## Next steps.
 
-Here we only have a very basic example working. 
+Here we only have a very basic example working.
 The idea of this work will be to build an Rshiny app that we can intergrate in Django utilizing the django models and queryset objects.
 This means that primarily our manipulations and data extraction layer will be done in python, while visualizations and statistical analysis can be done in R.
 I feel this will be a great way to utilize the power of both tools in analytics.

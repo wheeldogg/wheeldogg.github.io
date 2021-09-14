@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Dash in python for creating easy and flexible dashboards
-categories: dash
+categories: Programming
 ---
 
 ![Dash](https://cdn.rawgit.com/plotly/dash-docs/b1178b4e/images/dash-logo-stripe.svg)

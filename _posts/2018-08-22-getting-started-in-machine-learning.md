@@ -1,10 +1,10 @@
 ---
 layout: post
 title: Machine learning projects
-categories: data-science
+categories: Data-Science
 tags:
-- python
-- machine learning
+  - python
+  - machine learning
 ---
 
 #### Introduction.
@@ -14,14 +14,16 @@ I would like to use this page to keep track of ML projects I've worked on and ho
 #### Tools.
 
 ### Python
-* Tensorflow
-* Pytorch
-* theano
-* Keras
-* Scikitlearn
-* etc.
+
+- Tensorflow
+- Pytorch
+- theano
+- Keras
+- Scikitlearn
+- etc.
 
 #### R
+
 [top-20-r-machine-learning-packages](https://www.kdnuggets.com/2015/06/top-20-r-machine-learning-packages.html)
 
 #### Projects
