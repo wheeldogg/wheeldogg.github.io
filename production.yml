@@ -1,0 +1,11 @@
+version: '2.1'
+services:
+      blog:
+          build:
+            context: .
+          volumes:
+            -  '.:/wheeldogg.github.io'
+          ports:
+            - "4000:4000"
+          restart: always
+
