@@ -1,7 +1,7 @@
 ---
 layout: post
 title: JupyterHub Deployment with Docker
-categories: Data Science
+categories: Data-Science
 tags:
   - Jupyterhub
 ---
