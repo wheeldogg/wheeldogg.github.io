@@ -35,7 +35,7 @@ author:
 
 # Navigation (2nd level links supported)
 nav:
-  Programming:
+  Blog:
     - "/blog/"
     - { Categories: "/blog/categories/" }
     - { Tags: "/blog/tags/" }
