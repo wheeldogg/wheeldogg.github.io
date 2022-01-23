@@ -6,9 +6,12 @@ tags:
   - AWS
 ---
 
-## setting up wordpress website
 
 # Lightsail
+
+
+
+![lightsail list](https://miro.medium.com/max/1170/1*M9yXunrNxP3V27CqWhhrmg.png)
 
 > Lightsail provides developers compute, storage, and networking capacity and capabilities to deploy and manage websites and web applications in the cloud. Lightsail includes everything you need to launch your project quickly — a virtual machine, SSD-based storage, data transfer, DNS management, and a static IP — for a low, predictable monthly price.
 
@@ -26,7 +29,7 @@ This is a great service for setting up a domain name.
 
 The original video from lightsail will detail how to setup the domain name with 
 
-### Other resources`
+### Other resources
 
 Article below accomplishes something similar using lightsai and namecheap and is more detailed. It's nice because it gives more detail to follow setting up DNS and linking with namecheap.com
 
