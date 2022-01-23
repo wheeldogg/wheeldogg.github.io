@@ -1,3 +1,11 @@
+---
+layout: post
+title: Deploying wordpress site on AWS Lightsail
+categories: Programming
+tags:
+  - AWS
+---
+
 ## setting up wordpress website
 
 # Lightsail
@@ -18,7 +26,7 @@ This is a great service for setting up a domain name.
 
 The original video from lightsail will detail how to setup the domain name with 
 
-### Other resources
+### Other resources`
 
 Article below accomplishes something similar using lightsai and namecheap and is more detailed. It's nice because it gives more detail to follow setting up DNS and linking with namecheap.com
 
