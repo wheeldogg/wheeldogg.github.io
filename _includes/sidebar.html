@@ -1,6 +1,8 @@
 <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
      styles, `#sidebar-checkbox` for behavior. -->
+
 <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" />
+
 
 <!-- Toggleable sidebar -->
 <div class="sidebar" id="sidebar">
@@ -30,6 +32,14 @@
           </a>
           {% assign current_index = current_index | plus: 1 %} {% if
           current_index != len %}|{% endif %} {% endfor %}
+        </p>
+      </div>
+      <div class="sidebar-personal-info-cv">
+        <p>
+          Curriculum vitae:
+          <a href="{{ site.baseurl }}/blog/cv">
+            <i class="fa fa-user" aria-hidden="true"></i>
+          </a>
         </p>
       </div>
       {% endif %}
