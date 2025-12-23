@@ -79,9 +79,14 @@
 @layer base {
   .prose {
     @apply prose-invert prose-zinc;
+    --tw-prose-body: theme(colors.zinc.200);
+    --tw-prose-headings: theme(colors.white);
     --tw-prose-links: theme(colors.brand.400);
     --tw-prose-code: theme(colors.brand.300);
-    --tw-prose-bullets: theme(colors.zinc.500);
+    --tw-prose-bullets: theme(colors.zinc.400);
+    --tw-prose-bold: theme(colors.zinc.100);
+    --tw-prose-counters: theme(colors.zinc.400);
+    --tw-prose-quotes: theme(colors.zinc.300);
   }
 
   .prose a {
@@ -89,7 +94,7 @@
   }
 
   .prose code {
-    @apply bg-zinc-800 px-1.5 py-0.5 rounded;
+    @apply bg-zinc-800 px-1.5 py-0.5 rounded text-zinc-200;
   }
 
   .prose pre {
@@ -99,13 +104,19 @@
   .prose h1,
   .prose h2,
   .prose h3,
-  .prose h4 {
-    @apply text-zinc-100;
+  .prose h4,
+  .prose h5,
+  .prose h6 {
+    @apply text-white font-semibold;
   }
 
   .prose p,
   .prose li {
-    @apply text-zinc-300;
+    @apply text-zinc-200;
+  }
+
+  .prose strong {
+    @apply text-zinc-100 font-semibold;
   }
 }
 
