@@ -103,9 +103,22 @@
   @apply bg-zinc-900 border border-zinc-800;
 }
 
-.prose h1,
-.prose h2,
-.prose h3,
+.prose h1 {
+  @apply !text-white !font-semibold;
+}
+
+.prose h2 {
+  @apply !font-semibold;
+  background: linear-gradient(to right, var(--color-brand-400), var(--color-violet-400));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+}
+
+.prose h3 {
+  @apply !text-brand-400 !font-semibold;
+}
+
 .prose h4,
 .prose h5,
 .prose h6 {
