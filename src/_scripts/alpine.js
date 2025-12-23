@@ -19,12 +19,24 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 
-  // Theme store (for potential light/dark toggle)
+  // Theme store with localStorage persistence and system preference
   Alpine.store("theme", {
-    dark: true,
+    dark: document.documentElement.classList.contains("dark"),
+
+    init() {
+      // Listen for system preference changes (when no saved preference)
+      window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
+        if (!localStorage.getItem("theme")) {
+          this.dark = e.matches;
+          document.documentElement.classList.toggle("dark", this.dark);
+        }
+      });
+    },
+
     toggle() {
       this.dark = !this.dark;
       document.documentElement.classList.toggle("dark", this.dark);
+      localStorage.setItem("theme", this.dark ? "dark" : "light");
     },
   });
 

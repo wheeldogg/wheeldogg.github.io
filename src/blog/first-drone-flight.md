@@ -5,8 +5,6 @@ date: 2024-12-05
 category: nature
 ---
 
-# My First Drone Flight Over the Coast
-
 There's something magical about seeing the world from above. Last week, I finally took my drone out for a proper coastal shoot, and the results exceeded all expectations.
 
 ## The Setup

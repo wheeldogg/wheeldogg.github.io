@@ -5,8 +5,6 @@ date: 2024-12-01
 category: blog
 ---
 
-# Welcome to Wheeldogg
-
 Hey there! I'm excited to finally launch this space where I can share my journey across all the things I'm passionate about.
 
 ## What to Expect

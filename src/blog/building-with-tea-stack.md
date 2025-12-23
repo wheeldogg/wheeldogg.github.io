@@ -5,8 +5,6 @@ date: 2024-12-10
 category: software
 ---
 
-# Building This Blog with the TEA Stack
-
 When I set out to build this blog, I wanted something fast, simple, and easy to maintain. The TEA Stack (Tailwind, Eleventy, Alpine.js) turned out to be the perfect choice.
 
 ## Why TEA?
