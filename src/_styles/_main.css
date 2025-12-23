@@ -88,36 +88,37 @@
     --tw-prose-counters: theme(colors.zinc.400);
     --tw-prose-quotes: theme(colors.zinc.300);
   }
+}
 
-  .prose a {
-    @apply no-underline hover:underline;
-  }
+/* Prose element overrides - must come after @layer to override typography plugin */
+.prose a {
+  @apply no-underline hover:underline;
+}
 
-  .prose code {
-    @apply bg-zinc-800 px-1.5 py-0.5 rounded text-zinc-200;
-  }
+.prose code {
+  @apply bg-zinc-800 px-1.5 py-0.5 rounded text-zinc-200;
+}
 
-  .prose pre {
-    @apply bg-zinc-900 border border-zinc-800;
-  }
+.prose pre {
+  @apply bg-zinc-900 border border-zinc-800;
+}
 
-  .prose h1,
-  .prose h2,
-  .prose h3,
-  .prose h4,
-  .prose h5,
-  .prose h6 {
-    @apply text-white font-semibold;
-  }
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  @apply text-white font-semibold !important;
+}
 
-  .prose p,
-  .prose li {
-    @apply text-zinc-200;
-  }
+.prose p,
+.prose li {
+  @apply text-zinc-200;
+}
 
-  .prose strong {
-    @apply text-zinc-100 font-semibold;
-  }
+.prose strong {
+  @apply text-zinc-100 font-semibold;
 }
 
 /* Animations */
