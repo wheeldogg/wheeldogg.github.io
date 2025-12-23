@@ -1,0 +1,73 @@
+---
+title: Software
+description: Development projects, tutorials, and coding adventures
+---
+
+{% extends "@includes/layout.twig" %}
+
+{% block body %}
+<main class="py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-cyan-500/10 mb-6">
+        <svg class="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+        </svg>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">
+        <span class="gradient-text">Software</span>
+      </h1>
+      <p class="text-xl text-zinc-400 max-w-2xl mx-auto">
+        Building tools, solving problems, and sharing what I learn along the way.
+      </p>
+    </div>
+
+    <!-- Featured Projects -->
+    <h2 class="text-2xl font-semibold mb-6">Featured Projects</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+      <div class="card card-hover p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-10 h-10 rounded-lg bg-cyan-500/10 flex items-center justify-center">
+            <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+            </svg>
+          </div>
+          <h3 class="font-semibold">Project Name</h3>
+        </div>
+        <p class="text-zinc-400 text-sm mb-4">Description of your project goes here. What problem does it solve?</p>
+        <div class="flex gap-2">
+          <span class="text-xs px-2 py-1 rounded bg-zinc-800 text-zinc-400">TypeScript</span>
+          <span class="text-xs px-2 py-1 rounded bg-zinc-800 text-zinc-400">Node.js</span>
+        </div>
+      </div>
+
+      <div class="card p-6 border-dashed flex items-center justify-center">
+        <p class="text-zinc-500 text-sm text-center">Add your projects here</p>
+      </div>
+    </div>
+
+    <!-- Software Posts -->
+    <h2 class="text-2xl font-semibold mb-6">Tutorials & Articles</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      {% for post in collections.posts | reverse %}
+        {% if post.data.category == 'software' %}
+          <article class="card card-hover p-6">
+            <span class="category-badge bg-cyan-500/10 text-cyan-400 mb-3">Software</span>
+            <a href="{{ post.url }}">
+              <h3 class="text-lg font-semibold mb-2 hover:text-cyan-400 transition-colors">{{ post.data.title }}</h3>
+            </a>
+            <p class="text-zinc-400 text-sm mb-3">{{ post.data.excerpt }}</p>
+            <time class="text-xs text-zinc-500">{{ post.date | date("M j, Y") }}</time>
+          </article>
+        {% endif %}
+      {% else %}
+        <div class="card p-8 text-center col-span-full">
+          <p class="text-zinc-400">Software posts coming soon!</p>
+          <p class="text-zinc-500 text-sm mt-2">Add posts with <code class="text-cyan-400">category: software</code> in the frontmatter.</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</main>
+{% endblock %}

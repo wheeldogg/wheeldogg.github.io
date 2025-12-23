@@ -1,0 +1,164 @@
+---
+title: Home
+description: Personal blog exploring music, software, nature, fitness, and visual arts
+---
+
+{% extends "@includes/layout.twig" %}
+
+{% block body %}
+<main>
+  <!-- Hero Section -->
+  <section class="relative min-h-[80vh] flex items-center overflow-hidden">
+    <!-- Gradient background -->
+    <div class="absolute inset-0 bg-gradient-to-br from-zinc-950 via-zinc-900 to-zinc-950"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-brand-500/20 via-transparent to-transparent"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-violet-500/10 via-transparent to-transparent"></div>
+
+    <!-- Animated orbs -->
+    <div class="absolute top-20 right-20 w-72 h-72 bg-brand-500/20 rounded-full blur-3xl animate-float"></div>
+    <div class="absolute bottom-20 left-20 w-96 h-96 bg-violet-500/10 rounded-full blur-3xl animate-float" style="animation-delay: -3s;"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="max-w-3xl">
+        <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+          <span class="gradient-text">Wheeldogg</span>
+        </h1>
+        <p class="text-xl text-zinc-300 mb-8 leading-relaxed">
+          Music, software, nature, and visual storytelling.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="/about/" class="btn btn-primary">About Me</a>
+          <a href="/blog/" class="btn btn-secondary">Read the Blog</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <section class="py-20 bg-zinc-900/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="section-title gradient-text">What I Do</h2>
+        <p class="text-zinc-400 max-w-2xl mx-auto">
+          Exploring different creative disciplines and finding the threads that connect them all.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Music -->
+        <a href="/music/" class="card card-hover p-6 group">
+          <div class="w-14 h-14 rounded-xl bg-violet-500/10 flex items-center justify-center mb-4 group-hover:bg-violet-500/20 transition-colors">
+            <svg class="w-7 h-7 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2 group-hover:text-violet-400 transition-colors">Music</h3>
+          <p class="text-zinc-300 text-sm">Production, composition, and sonic landscapes.</p>
+        </a>
+
+        <!-- Software -->
+        <a href="/software/" class="card card-hover p-6 group">
+          <div class="w-14 h-14 rounded-xl bg-cyan-500/10 flex items-center justify-center mb-4 group-hover:bg-cyan-500/20 transition-colors">
+            <svg class="w-7 h-7 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2 group-hover:text-cyan-400 transition-colors">Software</h3>
+          <p class="text-zinc-300 text-sm">Coding, development, and building tools.</p>
+        </a>
+
+        <!-- Nature -->
+        <a href="/nature/" class="card card-hover p-6 group">
+          <div class="w-14 h-14 rounded-xl bg-green-500/10 flex items-center justify-center mb-4 group-hover:bg-green-500/20 transition-colors">
+            <svg class="w-7 h-7 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2 group-hover:text-green-400 transition-colors">Nature</h3>
+          <p class="text-zinc-300 text-sm">Adventures, landscapes, and the outdoors.</p>
+        </a>
+
+        <!-- Photography -->
+        <a href="/gallery/" class="card card-hover p-6 group">
+          <div class="w-14 h-14 rounded-xl bg-rose-500/10 flex items-center justify-center mb-4 group-hover:bg-rose-500/20 transition-colors">
+            <svg class="w-7 h-7 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2 group-hover:text-rose-400 transition-colors">Photography</h3>
+          <p class="text-zinc-300 text-sm">Capturing moments through images.</p>
+        </a>
+
+        <!-- Drone -->
+        <a href="/gallery/" class="card card-hover p-6 group">
+          <div class="w-14 h-14 rounded-xl bg-sky-500/10 flex items-center justify-center mb-4 group-hover:bg-sky-500/20 transition-colors">
+            <svg class="w-7 h-7 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2 group-hover:text-sky-400 transition-colors">Drone Footage</h3>
+          <p class="text-zinc-300 text-sm">Aerial perspectives from above.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest Posts Section -->
+  <section class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between mb-12">
+        <div>
+          <h2 class="section-title">Latest Posts</h2>
+          <p class="text-zinc-400">Thoughts, tutorials, and creative explorations.</p>
+        </div>
+        <a href="/blog/" class="btn btn-ghost hidden sm:flex">
+          View All
+          <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {% for post in collections.posts | reverse | slice(0, 3) %}
+          <article class="card card-hover overflow-hidden">
+            <div class="aspect-video bg-zinc-800"></div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="category-badge bg-brand-500/10 text-brand-400">{{ post.data.category | default('Blog') }}</span>
+                <time class="text-xs text-zinc-500">{{ post.date | date("M j, Y") }}</time>
+              </div>
+              <a href="{{ post.url }}">
+                <h3 class="text-lg font-semibold mb-2 hover:text-brand-400 transition-colors">{{ post.data.title }}</h3>
+              </a>
+              <p class="text-zinc-400 text-sm line-clamp-2">{{ post.data.excerpt }}</p>
+            </div>
+          </article>
+        {% else %}
+          <div class="card p-8 text-center col-span-full">
+            <p class="text-zinc-400">Blog posts coming soon!</p>
+            <p class="text-zinc-500 text-sm mt-2">Add markdown files to <code class="text-brand-400">src/blog/</code> to get started.</p>
+          </div>
+        {% endfor %}
+      </div>
+
+      <div class="mt-8 text-center sm:hidden">
+        <a href="/blog/" class="btn btn-secondary">View All Posts</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-gradient-to-br from-brand-500/10 via-zinc-900/50 to-violet-500/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="section-title mb-4">Let's Connect</h2>
+      <p class="text-zinc-400 max-w-2xl mx-auto mb-8">
+        Whether you want to collaborate on a project, discuss music production,
+        or just say hello - I'd love to hear from you.
+      </p>
+      <a href="/about/" class="btn btn-primary">Get in Touch</a>
+    </div>
+  </section>
+</main>
+{% endblock %}

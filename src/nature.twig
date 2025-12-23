@@ -1,0 +1,66 @@
+---
+title: Nature
+description: Adventures in the great outdoors
+---
+
+{% extends "@includes/layout.twig" %}
+
+{% block body %}
+<main class="py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-green-500/10 mb-6">
+        <svg class="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+        </svg>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">
+        <span class="gradient-text">Nature</span>
+      </h1>
+      <p class="text-xl text-zinc-400 max-w-2xl mx-auto">
+        Exploring wild places, finding peace in the outdoors, and documenting the journey.
+      </p>
+    </div>
+
+    <!-- Featured Adventure -->
+    <div class="card overflow-hidden mb-12">
+      <div class="aspect-[21/9] bg-gradient-to-br from-green-500/20 to-emerald-500/20 flex items-center justify-center">
+        <p class="text-zinc-500">Featured adventure image</p>
+      </div>
+      <div class="p-8">
+        <h2 class="text-2xl font-semibold mb-4">Latest Adventure</h2>
+        <p class="text-zinc-400">
+          Share your recent outdoor experiences, hiking trips, camping adventures,
+          or simply moments of connection with nature.
+        </p>
+      </div>
+    </div>
+
+    <!-- Nature Posts -->
+    <h2 class="text-2xl font-semibold mb-6">Nature Journal</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      {% for post in collections.posts | reverse %}
+        {% if post.data.category == 'nature' %}
+          <article class="card card-hover overflow-hidden">
+            <div class="aspect-video bg-zinc-800"></div>
+            <div class="p-6">
+              <span class="category-badge bg-green-500/10 text-green-400 mb-3">Nature</span>
+              <a href="{{ post.url }}">
+                <h3 class="text-lg font-semibold mb-2 hover:text-green-400 transition-colors">{{ post.data.title }}</h3>
+              </a>
+              <p class="text-zinc-400 text-sm mb-3">{{ post.data.excerpt }}</p>
+              <time class="text-xs text-zinc-500">{{ post.date | date("M j, Y") }}</time>
+            </div>
+          </article>
+        {% endif %}
+      {% else %}
+        <div class="card p-8 text-center col-span-full">
+          <p class="text-zinc-400">Nature posts coming soon!</p>
+          <p class="text-zinc-500 text-sm mt-2">Add posts with <code class="text-green-400">category: nature</code> in the frontmatter.</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</main>
+{% endblock %}

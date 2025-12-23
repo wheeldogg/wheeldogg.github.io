@@ -1,0 +1,131 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/forms";
+@plugin "@tailwindcss/typography";
+
+/* Custom Wheeldogg theme */
+@theme {
+  --color-brand-50: #f0f9ff;
+  --color-brand-100: #e0f2fe;
+  --color-brand-200: #bae6fd;
+  --color-brand-300: #7dd3fc;
+  --color-brand-400: #38bdf8;
+  --color-brand-500: #0ea5e9;
+  --color-brand-600: #0284c7;
+  --color-brand-700: #0369a1;
+  --color-brand-800: #075985;
+  --color-brand-900: #0c4a6e;
+}
+
+/* Base styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply min-h-screen flex flex-col bg-zinc-950 text-zinc-200;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+
+  main {
+    @apply flex-1;
+  }
+
+  ::selection {
+    @apply bg-brand-500/30;
+  }
+}
+
+/* Component styles */
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-5 py-2.5 rounded-full font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-zinc-950;
+  }
+
+  .btn-primary {
+    @apply bg-gradient-to-r from-brand-500 to-violet-500 text-white hover:from-brand-400 hover:to-violet-400 focus:ring-brand-500 shadow-lg shadow-brand-500/25;
+  }
+
+  .btn-secondary {
+    @apply bg-zinc-800 text-zinc-100 hover:bg-zinc-700 border border-zinc-700 focus:ring-zinc-500;
+  }
+
+  .btn-ghost {
+    @apply text-zinc-400 hover:text-zinc-100 hover:bg-zinc-800/50;
+  }
+
+  .card {
+    @apply bg-zinc-900/50 backdrop-blur-sm rounded-2xl border border-zinc-800 overflow-hidden transition-all duration-300 hover:border-zinc-700;
+  }
+
+  .card-hover {
+    @apply hover:shadow-xl hover:shadow-brand-500/5 hover:-translate-y-1;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-brand-400 via-violet-400 to-fuchsia-400 bg-clip-text text-transparent;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-4;
+  }
+
+  .category-badge {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium uppercase tracking-wide;
+  }
+}
+
+/* Typography overrides for dark mode */
+@layer base {
+  .prose {
+    @apply prose-invert prose-zinc;
+    --tw-prose-links: theme(colors.brand.400);
+    --tw-prose-code: theme(colors.brand.300);
+    --tw-prose-bullets: theme(colors.zinc.500);
+  }
+
+  .prose a {
+    @apply no-underline hover:underline;
+  }
+
+  .prose code {
+    @apply bg-zinc-800 px-1.5 py-0.5 rounded;
+  }
+
+  .prose pre {
+    @apply bg-zinc-900 border border-zinc-800;
+  }
+
+  .prose h1,
+  .prose h2,
+  .prose h3,
+  .prose h4 {
+    @apply text-zinc-100;
+  }
+
+  .prose p,
+  .prose li {
+    @apply text-zinc-300;
+  }
+}
+
+/* Animations */
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes glow {
+    from { box-shadow: 0 0 20px theme(colors.brand.500 / 20%); }
+    to { box-shadow: 0 0 30px theme(colors.brand.500 / 40%); }
+  }
+}

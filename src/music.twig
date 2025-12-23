@@ -1,0 +1,60 @@
+---
+title: Music
+description: Music production, compositions, and sonic explorations
+---
+
+{% extends "@includes/layout.twig" %}
+
+{% block body %}
+<main class="py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-violet-500/10 mb-6">
+        <svg class="w-8 h-8 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/>
+        </svg>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">
+        <span class="gradient-text">Music</span>
+      </h1>
+      <p class="text-xl text-zinc-400 max-w-2xl mx-auto">
+        Exploring sound through production, composition, and endless experimentation.
+      </p>
+    </div>
+
+    <!-- Featured Track -->
+    <div class="card p-8 mb-12">
+      <h2 class="text-2xl font-semibold mb-4">Featured Track</h2>
+      <div class="aspect-video bg-zinc-800 rounded-xl flex items-center justify-center mb-4">
+        <p class="text-zinc-500">Audio player / SoundCloud embed goes here</p>
+      </div>
+      <p class="text-zinc-400">
+        Add your music embeds from SoundCloud, Bandcamp, Spotify, or YouTube here.
+      </p>
+    </div>
+
+    <!-- Music Posts -->
+    <h2 class="text-2xl font-semibold mb-6">Music Posts</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      {% for post in collections.posts | reverse %}
+        {% if post.data.category == 'music' %}
+          <article class="card card-hover p-6">
+            <span class="category-badge bg-violet-500/10 text-violet-400 mb-3">Music</span>
+            <a href="{{ post.url }}">
+              <h3 class="text-lg font-semibold mb-2 hover:text-violet-400 transition-colors">{{ post.data.title }}</h3>
+            </a>
+            <p class="text-zinc-400 text-sm mb-3">{{ post.data.excerpt }}</p>
+            <time class="text-xs text-zinc-500">{{ post.date | date("M j, Y") }}</time>
+          </article>
+        {% endif %}
+      {% else %}
+        <div class="card p-8 text-center col-span-full">
+          <p class="text-zinc-400">Music posts coming soon!</p>
+          <p class="text-zinc-500 text-sm mt-2">Add posts with <code class="text-violet-400">category: music</code> in the frontmatter.</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</main>
+{% endblock %}

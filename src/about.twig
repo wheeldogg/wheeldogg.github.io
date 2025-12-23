@@ -1,0 +1,94 @@
+---
+title: About
+description: Learn more about Wheeldogg
+---
+
+{% extends "@includes/layout.twig" %}
+
+{% block body %}
+<main class="py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <!-- Image placeholder -->
+      <div class="aspect-square rounded-2xl bg-gradient-to-br from-brand-500/20 to-violet-500/20 flex items-center justify-center">
+        <div class="w-32 h-32 rounded-full bg-gradient-to-br from-brand-500 to-violet-500 flex items-center justify-center text-white text-5xl font-bold">
+          W
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div>
+        <p class="text-brand-400 font-medium mb-2 uppercase tracking-wide text-sm">About Me</p>
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">
+          Hey, I'm <span class="gradient-text">Wheeldogg</span>
+        </h1>
+        <div class="prose lg:prose-lg">
+          <p>
+            I'm a creator living at the intersection of technology and art.
+            My days are split between writing code, producing music, exploring
+            the outdoors, and capturing it all through photography and drone footage.
+          </p>
+          <p>
+            I believe that creativity flows between disciplines - the patterns
+            I find in code echo in music, the peace I find in nature fuels my
+            creativity, and staying physically fit keeps my mind sharp for all of it.
+          </p>
+          <p>
+            This blog is my space to share that journey. You'll find tutorials,
+            project breakdowns, nature adventures, fitness insights, and plenty
+            of visual content from my explorations.
+          </p>
+        </div>
+
+        <div class="mt-8 flex flex-wrap gap-3">
+          <span class="category-badge bg-violet-500/10 text-violet-400">Music Producer</span>
+          <span class="category-badge bg-cyan-500/10 text-cyan-400">Developer</span>
+          <span class="category-badge bg-green-500/10 text-green-400">Nature Lover</span>
+          <span class="category-badge bg-orange-500/10 text-orange-400">Fitness Enthusiast</span>
+          <span class="category-badge bg-rose-500/10 text-rose-400">Photographer</span>
+          <span class="category-badge bg-sky-500/10 text-sky-400">Drone Pilot</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Skills/Interests Grid -->
+    <div class="mt-20">
+      <h2 class="section-title text-center mb-12">What Drives Me</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="card p-6">
+          <h3 class="text-xl font-semibold mb-4 text-violet-400">Music & Sound</h3>
+          <p class="text-zinc-400">
+            From electronic production to acoustic experimentation, I'm fascinated
+            by how sound shapes our emotions and experiences. I produce, mix, and
+            constantly explore new sonic territories.
+          </p>
+        </div>
+        <div class="card p-6">
+          <h3 class="text-xl font-semibold mb-4 text-cyan-400">Software & Code</h3>
+          <p class="text-zinc-400">
+            Building things with code is deeply satisfying. Whether it's web
+            applications, automation tools, or creative coding projects, I love
+            solving problems through technology.
+          </p>
+        </div>
+        <div class="card p-6">
+          <h3 class="text-xl font-semibold mb-4 text-green-400">Nature & Outdoors</h3>
+          <p class="text-zinc-400">
+            There's nothing like being out in nature to reset and recharge.
+            Hiking, camping, and simply being present in natural spaces is
+            essential to my creative process.
+          </p>
+        </div>
+        <div class="card p-6">
+          <h3 class="text-xl font-semibold mb-4 text-orange-400">Fitness & Movement</h3>
+          <p class="text-zinc-400">
+            Staying active isn't just about physical health - it's about mental
+            clarity and pushing limits. Training consistently is a cornerstone
+            of how I approach everything else.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}

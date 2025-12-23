@@ -1,0 +1,116 @@
+---
+title: Gallery
+description: Photography and drone footage
+---
+
+{% extends "@includes/layout.twig" %}
+
+{% block body %}
+<main class="py-16" x-data="lightbox()">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <div class="inline-flex items-center gap-3 mb-6">
+        <div class="w-16 h-16 rounded-2xl bg-rose-500/10 flex items-center justify-center">
+          <svg class="w-8 h-8 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"/>
+          </svg>
+        </div>
+        <div class="w-16 h-16 rounded-2xl bg-sky-500/10 flex items-center justify-center">
+          <svg class="w-8 h-8 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+          </svg>
+        </div>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">
+        <span class="gradient-text">Gallery</span>
+      </h1>
+      <p class="text-xl text-zinc-400 max-w-2xl mx-auto">
+        Visual stories captured through photography and aerial cinematography.
+      </p>
+    </div>
+
+    <!-- Filter Tabs -->
+    <div class="flex justify-center gap-2 mb-12" x-data="{ filter: 'all' }">
+      <button
+        @click="filter = 'all'"
+        class="btn"
+        :class="filter === 'all' ? 'btn-primary' : 'btn-ghost'"
+      >All</button>
+      <button
+        @click="filter = 'photo'"
+        class="btn"
+        :class="filter === 'photo' ? 'btn-primary' : 'btn-ghost'"
+      >Photography</button>
+      <button
+        @click="filter = 'drone'"
+        class="btn"
+        :class="filter === 'drone' ? 'btn-primary' : 'btn-ghost'"
+      >Drone</button>
+    </div>
+
+    <!-- Gallery Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <!-- Sample gallery items - replace with your images -->
+      <div class="aspect-square rounded-xl bg-gradient-to-br from-rose-500/20 to-pink-500/20 cursor-pointer hover:opacity-80 transition-opacity flex items-center justify-center">
+        <p class="text-zinc-500 text-xs text-center px-4">Add your photos here</p>
+      </div>
+      <div class="aspect-square rounded-xl bg-gradient-to-br from-sky-500/20 to-cyan-500/20 cursor-pointer hover:opacity-80 transition-opacity flex items-center justify-center">
+        <p class="text-zinc-500 text-xs text-center px-4">Drone shot</p>
+      </div>
+      <div class="aspect-[2/3] rounded-xl bg-gradient-to-br from-green-500/20 to-emerald-500/20 row-span-2 cursor-pointer hover:opacity-80 transition-opacity flex items-center justify-center">
+        <p class="text-zinc-500 text-xs text-center px-4">Portrait</p>
+      </div>
+      <div class="aspect-square rounded-xl bg-gradient-to-br from-violet-500/20 to-purple-500/20 cursor-pointer hover:opacity-80 transition-opacity flex items-center justify-center">
+        <p class="text-zinc-500 text-xs text-center px-4">Nature</p>
+      </div>
+      <div class="aspect-square rounded-xl bg-gradient-to-br from-orange-500/20 to-amber-500/20 cursor-pointer hover:opacity-80 transition-opacity flex items-center justify-center">
+        <p class="text-zinc-500 text-xs text-center px-4">Adventure</p>
+      </div>
+      <div class="aspect-square rounded-xl bg-gradient-to-br from-cyan-500/20 to-teal-500/20 cursor-pointer hover:opacity-80 transition-opacity flex items-center justify-center">
+        <p class="text-zinc-500 text-xs text-center px-4">Aerial</p>
+      </div>
+    </div>
+
+    <!-- Instructions -->
+    <div class="mt-12 card p-6 text-center">
+      <h3 class="font-semibold mb-2">Adding Your Photos</h3>
+      <p class="text-zinc-400 text-sm">
+        Place your images in the <code class="text-brand-400">public/gallery/</code> folder and update this template
+        to display them. Consider using a data file in <code class="text-brand-400">src/_data/</code> to manage your gallery items.
+      </p>
+    </div>
+  </div>
+
+  <!-- Lightbox Modal -->
+  <div
+    x-show="isOpen"
+    x-transition:enter="transition ease-out duration-300"
+    x-transition:enter-start="opacity-0"
+    x-transition:enter-end="opacity-100"
+    x-transition:leave="transition ease-in duration-200"
+    x-transition:leave-start="opacity-100"
+    x-transition:leave-end="opacity-0"
+    class="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
+    @click.self="close()"
+    @keydown.escape.window="close()"
+    x-cloak
+  >
+    <button
+      @click="close()"
+      class="absolute top-4 right-4 p-2 text-white/60 hover:text-white transition-colors"
+    >
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+    <img
+      x-show="currentImage"
+      :src="currentImage?.src"
+      :alt="currentImage?.alt"
+      class="max-w-full max-h-full object-contain rounded-lg"
+    />
+  </div>
+</main>
+{% endblock %}

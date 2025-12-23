@@ -1,0 +1,45 @@
+---
+title: Blog
+description: Latest posts and updates from Wheeldogg
+---
+
+{% extends "@includes/layout.twig" %}
+
+{% block body %}
+<main class="py-12">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Header -->
+    <div class="mb-8">
+      <h1 class="text-3xl font-bold mb-2 text-zinc-100">Blog</h1>
+      <p class="text-zinc-400">Posts and updates.</p>
+    </div>
+
+    <!-- Filter by category -->
+    <div class="flex flex-wrap gap-2 mb-8">
+      <a href="/blog/" class="category-badge bg-brand-500/10 text-brand-400">All</a>
+      <a href="/music/" class="category-badge bg-violet-500/10 text-violet-400 hover:bg-violet-500/20 transition-colors">Music</a>
+      <a href="/software/" class="category-badge bg-cyan-500/10 text-cyan-400 hover:bg-cyan-500/20 transition-colors">Software</a>
+      <a href="/nature/" class="category-badge bg-green-500/10 text-green-400 hover:bg-green-500/20 transition-colors">Nature</a>
+    </div>
+
+    <!-- Posts List -->
+    <div class="space-y-4">
+      {% for post in collections.posts | reverse %}
+        <a href="{{ post.url }}" class="block p-4 rounded-lg border border-zinc-800 hover:border-zinc-700 hover:bg-zinc-900/50 transition-colors">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <h2 class="text-lg font-medium text-zinc-100 mb-1">{{ post.data.title }}</h2>
+              <p class="text-zinc-400 text-sm">{{ post.data.excerpt }}</p>
+            </div>
+            <time class="text-xs text-zinc-500 whitespace-nowrap">{{ post.date | date("M j, Y") }}</time>
+          </div>
+        </a>
+      {% else %}
+        <div class="p-8 text-center border border-zinc-800 rounded-lg">
+          <p class="text-zinc-400">No posts yet.</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</main>
+{% endblock %}
