@@ -109,7 +109,7 @@
 .prose h4,
 .prose h5,
 .prose h6 {
-  @apply text-white font-semibold !important;
+  @apply !text-white !font-semibold;
 }
 
 .prose p,
