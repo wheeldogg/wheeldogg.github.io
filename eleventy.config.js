@@ -25,9 +25,13 @@ export default function (eleventyConfig) {
   });
 
   // Global data
+  const pathPrefix = process.env.NODE_ENV === "production" ? "/wheeldogg_blog" : "";
+
   eleventyConfig.addGlobalData("env", {
     devMode: process.env.NODE_ENV !== "production",
   });
+
+  eleventyConfig.addGlobalData("pathPrefix", pathPrefix);
 
   eleventyConfig.addGlobalData("site", {
     title: "Wheeldogg",
@@ -63,6 +67,7 @@ export default function (eleventyConfig) {
       includes: "_includes",
       data: "_data",
     },
+    pathPrefix: process.env.NODE_ENV === "production" ? "/wheeldogg_blog/" : "/",
     markdownTemplateEngine: "twig",
   };
 }

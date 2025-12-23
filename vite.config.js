@@ -2,6 +2,7 @@ import tailwindcss from "@tailwindcss/vite";
 
 /** @type {import('vite').UserConfig} */
 export default {
+  base: process.env.NODE_ENV === "production" ? "/wheeldogg_blog/" : "/",
   plugins: [tailwindcss()],
   publicDir: false,
   build: {
